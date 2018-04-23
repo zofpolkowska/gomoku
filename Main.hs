@@ -34,7 +34,6 @@ module Main where
 			loopW (updateBoard (Board x) Black r c)
 
 	main = do
-		putStrLn "Beznadziejne przeszukiwanie troche zajmuje, nie nalezy popadac w panike!:')"
 		putStrLn ""
 		let board = initBoard 19 
 		showBoard board

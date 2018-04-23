@@ -9,7 +9,7 @@ countScore b cell = (checkEast b 1 1 cell 0 0) + (checkSouth b 1 1 cell 0 0) + (
 
 initTree b p r c = GNode b p r c (countScore b p) []
 
---drzewo zubozone, bo sie zawieszalo -.-
+
 maxDepth = 10
 initList b p r c 
 	|r >= 17 = []
@@ -57,7 +57,7 @@ minmax mm list@(node@(GNode b p r c s f):nodes) result
 	|mm == Min = minmax Max (intoForest (findMax list 0) list) (result - (findMax list 0))
 	|mm == Max = minmax Min (intoForest (findMax list 0) list) (result + (findMax list 0)*2)
 
--- pomocnice ------------------------------------
+-------------------------------------------------------------------------------------------------
 showG (GNode b pl r c s []) = showBoard b
 showG (GNode b pl r c s f@(t:ts)) = showBoard b >> showG t >> showL ts
 showL (x:xs) = showG x >> showL xs  
