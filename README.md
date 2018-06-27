@@ -7,5 +7,5 @@ Build & Run
 -----
 
 	$ ghci 
-	$ :l Main 
-	$ main
+	Prelude> :l Main 
+	Prelude> main
